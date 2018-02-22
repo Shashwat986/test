@@ -7,6 +7,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script type="text/javascript">
+          function test () {
+            Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");
+          }
+        </script>
+
         <style>
 
           .center {
@@ -47,7 +53,9 @@
           </div>
           <div class="row center">
             <div class="col4">
-              Left
+              <button onclick="test()">
+                Left
+              </button>
             </div>
             <div class="col4">
               Middle
