@@ -42,6 +42,12 @@
           .col12 {
             width: 100%;
           }
+
+          button {
+            padding: 5px;
+            background-color: #007bff;
+            color: #fff;
+          }
         </style>
     </head>
     <body>
@@ -53,15 +59,15 @@
           </div>
           <div class="row center">
             <div class="col4">
+              Hello
+            </div>
+            <div class="col4">
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>
-                Left
+                Open Your Profile
               </button>
             </div>
             <div class="col4">
-              Middle
-            </div>
-            <div class="col4">
-              Right
+              World
             </div>
           </div>
         </div>
