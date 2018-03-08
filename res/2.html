@@ -81,30 +81,24 @@
 
               <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"profile\", \"self\" : true, \"position\": 1, \"referrer\" : \"Pass\"}");'>myGallery</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : false, \"userId\" : 3, \"referrer\" : \"Pass\"}");'>otherProfile</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>otherProfile</button>
 
-              <!-- Why does this have user id? Shows incorrect screen... -->
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>profile_edit</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"self\" : true, \"referrer\" : \"Pass\"}");'>profile_edit</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>profile_editOther</button>
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"number_verify\", \"referrer\" : \"Pass\"}");'>number_verify</button>
 
-              <!-- Why does this have tag_id? Same as above
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"number_verify\", \"tagId\" : 12786126, \"referrer\" : \"Pass\"}");'>number_verify</button>
-              -->
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 0}");'>tag0</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 1}");'>tag1</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 2}");'>tag2</button>
 
-              <!-- These don't work
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"number_verify\", \"tagId\" : 12786126, \"referrer\" : \"Pass\", "position" : 0}");'>number_verify0</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"number_verify\", \"tagId\" : 12786126, \"referrer\" : \"Pass\", "position" : 1}");'>number_verify1</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"number_verify\", \"tagId\" : 12786126, \"referrer\" : \"Pass\", "position" : 2}");'>number_verify2</button>
-              -->
-
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", "isCommentSectionVisible" : false}");'>post</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", "isCommentSectionVisible" : true}");'>postComment</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : false}");'>post</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : true}");'>postComment</button>
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"self\" : true}");'>follower</button>
 
               <!-- This doesn't work
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"userId\" : 111111}");'>follower</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"userId\" : 3}");'>follower</button>
               -->
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\"}");'>compose</button>
@@ -115,7 +109,7 @@
               -->
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\"}");'>home</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : 999999}");'>exploreRandomBucketID</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : -1000}");'>exploreRandomBucketID</button>
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : 16}");'>exploreJokes</button>
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"comment\", \"referrer\" : \"Pass\", \"postId\" : 75889038, \"commentId\" : 1}");'>commentId</button>
@@ -129,7 +123,7 @@
               <button onclick='Android.onAction("{\"type\" : \"blocked_user\", \"referrer\" : \"Pass\"}");'>blocked_user</button>
               <button onclick='Android.onAction("{\"type\" : \"notification\", \"referrer\" : \"Pass\"}");'>notification</button>
               <button onclick='Android.onAction("{\"type\" : \"notification_setting\", \"referrer\" : \"Pass\"}");'>notification_setting</button>
-              <button onclick='Android.onAction("{\"type\" : \"web_post\", \"referrer\" : \"Pass\", \"postId\" : 999999999, \"webUrl\" : \"http://google.com\" }");'>web_post</button>
+              <button onclick='Android.onAction("{\"type\" : \"web_post\", \"referrer\" : \"Pass\", \"postId\" : -1000, \"webUrl\" : \"http://google.com\" }");'>web_post</button>
               <button onclick='Android.onAction("{\"type\" : \"contact\", \"referrer\" : \"Pass\"}");'>contact</button>
               <button onclick='Android.onAction("{\"type\" : \"playstore\", \"referrer\" : \"Pass\"}");'>playstore</button>
             </div>
