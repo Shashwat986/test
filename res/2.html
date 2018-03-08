@@ -96,10 +96,8 @@
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\"}");'>compose</button>
 
-              <!-- this doesn't work
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"tagId\" : 297}");'>composeInTag</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"stickerId\" : 84}");'>composeSticker</button>
-              -->
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"tag\", \"tagId\" : 297}");'>composeInTag</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"camera\", \"stickerId\" : 84}");'>composeSticker</button>
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\"}");'>home</button>
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : -1000}");'>exploreRandomBucketID</button>
