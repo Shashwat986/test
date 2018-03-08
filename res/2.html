@@ -6,13 +6,6 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <script type="text/javascript">
-          function test () {
-            Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");
-          }
-        </script>
-
         <style>
 
           .center {
@@ -88,9 +81,9 @@
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"number_verify\", \"referrer\" : \"Pass\"}");'>number_verify</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 0}");'>tag0</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 1}");'>tag1</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", "position" : 2}");'>tag2</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 0}");'>tag0</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 1}");'>tag1</button>
+              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 2}");'>tag2</button>
 
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : false}");'>post</button>
               <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : true}");'>postComment</button>
