@@ -6,6 +6,15 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+          var runAndroid = function (intent) {
+            if (typeof Android !== "undefined") {
+              Android.onAction(intent);
+            } else {
+              window.location.href = "not-supported.html"
+            }
+          }
+        </script>
         <style>
 
           .center {
@@ -59,7 +68,7 @@
               </a>
             </div>
             <div class="col4">
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>
                 Open Your Profile
               </button>
             </div>
@@ -69,56 +78,56 @@
           </div>
           <div class="row" style="margin-top: 20px;">
             <div class="col12">
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>myProfile</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>myProfile</button>
               <!-- Same as above
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"profile\", \"self\" : true, \"position\": 0, \"referrer\" : \"Pass\"}");'>profile1</button>
+              <button onclick='runAndroid("{\"action\" : \"open_fragment\", \"type\" : \"profile\", \"self\" : true, \"position\": 0, \"referrer\" : \"Pass\"}");'>profile1</button>
               -->
 
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"profile\", \"self\" : true, \"position\": 1, \"referrer\" : \"Pass\"}");'>myGallery</button>
+              <button onclick='runAndroid("{\"action\" : \"open_fragment\", \"type\" : \"profile\", \"self\" : true, \"position\": 1, \"referrer\" : \"Pass\"}");'>myGallery</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>otherProfile</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>otherProfile</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"self\" : true, \"referrer\" : \"Pass\"}");'>profile_edit</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>profile_editOther</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"self\" : true, \"referrer\" : \"Pass\"}");'>profile_edit</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile_edit\", \"userId\" : 3, \"referrer\" : \"Pass\"}");'>profile_editOther</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"number_verify\", \"referrer\" : \"Pass\"}");'>number_verify</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"number_verify\", \"referrer\" : \"Pass\"}");'>number_verify</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 0}");'>tag0</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 1}");'>tag1</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 2}");'>tag2</button>
+              <button onclick='runAndroid("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 0}");'>tag0</button>
+              <button onclick='runAndroid("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 1}");'>tag1</button>
+              <button onclick='runAndroid("{\"action\" : \"open_fragment\", \"type\" : \"tag\", \"tagId\" : 297, \"referrer\" : \"Pass\", \"position\" : 2}");'>tag2</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : false}");'>post</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : true}");'>postComment</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : false}");'>post</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"post\", \"postId\" : 75889038, \"referrer\" : \"Pass\", \"isCommentSectionVisible\" : true}");'>postComment</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"self\" : true}");'>follower</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"self\" : true}");'>follower</button>
 
               <!-- This doesn't work
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"userId\" : 3}");'>follower</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"follower\", \"referrer\" : \"Pass\", \"userId\" : 3}");'>follower</button>
               -->
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\"}");'>compose</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\"}");'>compose</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"tag\", \"tagId\" : 297}");'>composeInTag</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"camera\", \"stickerId\" : 84}");'>composeSticker</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"tag\", \"tagId\" : 297}");'>composeInTag</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"compose\", \"referrer\" : \"Pass\", \"subType\" : \"camera\", \"stickerId\" : 84}");'>composeSticker</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\"}");'>home</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : -1000}");'>exploreRandomBucketID</button>
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : 16}");'>exploreJokes</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\"}");'>home</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : -1000}");'>exploreRandomBucketID</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"home\", \"referrer\" : \"Pass\", \"bucketId\" : 16}");'>exploreJokes</button>
 
-              <button onclick='Android.onAction("{\"action\" : \"open_activity\", \"type\" : \"comment\", \"referrer\" : \"Pass\", \"postId\" : 75889038, \"commentId\" : 1}");'>commentId</button>
+              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"comment\", \"referrer\" : \"Pass\", \"postId\" : 75889038, \"commentId\" : 1}");'>commentId</button>
 
-              <button onclick='Android.onAction("{\"type\" : \"app_share\", \"referrer\" : \"Pass\"}");'>app_share</button>
+              <button onclick='runAndroid("{\"type\" : \"app_share\", \"referrer\" : \"Pass\"}");'>app_share</button>
 
               <!-- Sends user to home screen for language select -->
-              <button onclick='Android.onAction("{\"type\" : \"language\", \"referrer\" : \"Pass\"}");'>language</button>
+              <button onclick='runAndroid("{\"type\" : \"language\", \"referrer\" : \"Pass\"}");'>language</button>
 
-              <button onclick='Android.onAction("{\"type\" : \"profile_search\", \"referrer\" : \"Pass\"}");'>profile_search</button>
-              <button onclick='Android.onAction("{\"type\" : \"blocked_user\", \"referrer\" : \"Pass\"}");'>blocked_user</button>
-              <button onclick='Android.onAction("{\"type\" : \"notification\", \"referrer\" : \"Pass\"}");'>notification</button>
-              <button onclick='Android.onAction("{\"type\" : \"notification_setting\", \"referrer\" : \"Pass\"}");'>notification_setting</button>
-              <button onclick='Android.onAction("{\"type\" : \"web_post\", \"referrer\" : \"Pass\", \"postId\" : -1000, \"webUrl\" : \"http://google.com\" }");'>web_post</button>
-              <button onclick='Android.onAction("{\"type\" : \"contact\", \"referrer\" : \"Pass\"}");'>contact</button>
-              <button onclick='Android.onAction("{\"type\" : \"playstore\", \"referrer\" : \"Pass\"}");'>playstore</button>
+              <button onclick='runAndroid("{\"type\" : \"profile_search\", \"referrer\" : \"Pass\"}");'>profile_search</button>
+              <button onclick='runAndroid("{\"type\" : \"blocked_user\", \"referrer\" : \"Pass\"}");'>blocked_user</button>
+              <button onclick='runAndroid("{\"type\" : \"notification\", \"referrer\" : \"Pass\"}");'>notification</button>
+              <button onclick='runAndroid("{\"type\" : \"notification_setting\", \"referrer\" : \"Pass\"}");'>notification_setting</button>
+              <button onclick='runAndroid("{\"type\" : \"web_post\", \"referrer\" : \"Pass\", \"postId\" : -1000, \"webUrl\" : \"http://google.com\" }");'>web_post</button>
+              <button onclick='runAndroid("{\"type\" : \"contact\", \"referrer\" : \"Pass\"}");'>contact</button>
+              <button onclick='runAndroid("{\"type\" : \"playstore\", \"referrer\" : \"Pass\"}");'>playstore</button>
             </div>
           </div>
         </div>
