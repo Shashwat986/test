@@ -9,11 +9,15 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript">
           var runAndroid = function (intent) {
+            $.get('https://jsonplaceholder.typicode.com/posts/1', function (data) {
+              $("#e").html(data.title)
+            });
             try {
               $.ajax({
                 type: "POST",
                 url: 'http://13.126.68.182/test',
                 data: {
+                  payload: Android.get('userInfo')
                 },
                 success: function (resp) {
                   document.getElementById("r").innerHTML = '' + JSON.stringify(resp);
@@ -75,7 +79,7 @@
             </div>
           </div>
           <div class="row center">
-            <div class="col4">
+            <div class="col4" id="e">
               <a href="https://play.google.com/store/apps/details?id=in.mohalla.sharechat&hl=en" target="_blank">
                 Hello
               </a>
@@ -86,7 +90,7 @@
               </button>
             </div>
             <div class="col4" id="r">
-              World6
+              World7
             </div>
           </div>
         </div>
