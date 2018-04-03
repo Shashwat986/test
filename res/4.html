@@ -13,7 +13,7 @@
               if (Android.get('appVersion') < 168)
                 throw "Error";
             } catch (e) {
-              document.getElementByID("asdf").innerHTML = "Bad";
+              document.getElementById("asdf").innerHTML = "Bad";
               return;
             }
 
@@ -22,7 +22,7 @@
                 payload: Android.get('userInfo')
               });
             } catch (e) {
-              document.getElementByID("asdf").innerHTML = e;
+              document.getElementById("asdf").innerHTML = e;
             }
 
           }
@@ -85,7 +85,7 @@
               </button>
             </div>
             <div class="col4">
-              World3
+              World4
             </div>
           </div>
         </div>
