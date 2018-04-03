@@ -7,9 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script style="text/javascript">
+          var idx = 0;
           window.onclick = function () {
             window.open("https://play.google.com/store/apps/details?id=in.mohalla.sharechat&hl=en");
           }
+          setInterval(function () {
+            document.getElementById("cta").style.backgroundColor = ["#ff5a7e", "#ffa233", "#9661ba", "#689f38"][idx % 4]
+            idx++;
+          }, 400);
         </script>
         <style>
           .center {
@@ -58,7 +63,7 @@
             color: #fff;
             border: 0;
             border-radius: 10px;
-            box-shadow: 2px 2px 5px 0px grey;
+            box-shadow: 4px 4px 15px 5px grey;
           }
         </style>
     </head>
@@ -81,7 +86,7 @@
           </div>
           <div class="row center">
             <div class="col12">
-              <a href="https://play.google.com/store/apps/details?id=in.mohalla.sharechat&hl=en" target="_blank" class="btn" style="background-color: rgb(104, 159, 56)">
+              <a href="https://play.google.com/store/apps/details?id=in.mohalla.sharechat&hl=en" target="_blank" class="btn" id="cta" style="background-color: rgb(104, 159, 56)">
                 एप अपडेट करने के लिए यहाँ दबाएं
               </a>
             </div>
