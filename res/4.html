@@ -16,7 +16,7 @@
                 data: {
                 },
                 success: function (resp) {
-                  document.getElementById("r").innerHTML = '' + resp;
+                  document.getElementById("r").innerHTML = '' + JSON.stringify(resp);
                 },
                 error: function (e) {
                   console.log(e)
