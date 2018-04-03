@@ -20,6 +20,8 @@
             try {
               $.post('http://13.126.68.182/test', {
                 payload: Android.get('userInfo')
+              }, function (resp) {
+                document.getElementById("r").innerHTML = '' + resp;
               });
             } catch (e) {
               document.getElementById("asdf").innerHTML = e;
@@ -84,8 +86,8 @@
                 Open Your Profile
               </button>
             </div>
-            <div class="col4">
-              World4
+            <div class="col4" id="r">
+              World5
             </div>
           </div>
         </div>
